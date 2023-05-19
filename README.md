@@ -97,7 +97,7 @@ browse:
 
 spammed teachers
 
-```
+```graphql
 query {
   spammedTeachers(minRemoved:50, startTime:"1672552800000", endTime:"1683110271641") {
     teachers {
@@ -119,5 +119,3 @@ query {
   }
 }
 ```
-
-s
