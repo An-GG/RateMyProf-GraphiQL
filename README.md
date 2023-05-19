@@ -57,7 +57,7 @@ try messing around with this demo query:
 query {
   
   newSearch {
-    teachers(query: {schoolID:"U2Nob29sLTEyNTU="}, first: 100) {
+    teachers(query: {schoolID:"U2Nob29sLTEyNTU="}, first: 5000) {
       edges {
         node {
           firstName
@@ -83,3 +83,41 @@ query {
 }
 
 ```
+
+too lame and nerdy ?
+
+#### find exciting drama in the tenured world by looking for high spam rate teachers
+
+browse:
+
+ - extreme cope phd students spending hours making alts just to rant
+ - profs who finally figured out how to write code gaming the system like amazon reviews 
+ - endless sweet tea 
+    - use time range (drink REAL tea not AI tea)
+
+spammed teachers
+
+```
+query {
+  spammedTeachers(minRemoved:50, startTime:"1672552800000", endTime:"1683110271641") {
+    teachers {
+      firstName
+      lastName
+      id
+      ratingsDistribution {
+        r1
+        r2
+        r3
+        r4
+        r5
+      }
+      department
+      school {
+        name
+      }
+    }
+  }
+}
+```
+
+s
